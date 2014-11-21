@@ -38,7 +38,7 @@ data.combined <- rbind(train, test.survived)
 str(data.combined)
 
 data.combined$survived <- as.factor(data.combined$survived)
-data.combined$pclass <- as.factor(data.combined$pclass
+data.combined$pclass <- as.factor(data.combined$pclass)
 
 
 # Take a look at gross survival rates
