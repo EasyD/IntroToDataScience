@@ -19,7 +19,7 @@
 #
 # This R source code file corresponds to video 2 of the YouTube series
 # "Introduction to Data Science with R" located at the following URL:
-#     http://www.youtube.com/watch?v=32o0DnuRjfg
+#     https://www.youtube.com/watch?v=u6sahb7Hmog
 #
 
 
