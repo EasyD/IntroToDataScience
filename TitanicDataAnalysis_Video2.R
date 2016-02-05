@@ -55,7 +55,7 @@ library(ggplot2)
 # Hypothesis - Rich folks survived at a higer rate
 train$pclass <- as.factor(train$pclass)
 ggplot(train, aes(x = pclass, fill = factor(survived))) +
-  geom_histogram(width = 0.5) +
+  geom_bar() +
   xlab("Pclass") +
   ylab("Total Count") +
   labs(fill = "Survived") 
