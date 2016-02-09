@@ -151,7 +151,7 @@ summary(data.combined[1:891,"age"])
 # Just to be thorough, take a look at survival rates broken out by sex, pclass, and age
 ggplot(data.combined[1:891,], aes(x = age, fill = survived)) +
   facet_wrap(~sex + pclass) +
-  geom_histogram(binwidth = 10) +
+  stat_count(width = 10) +
   xlab("Age") +
   ylab("Total Count")
 
@@ -167,7 +167,7 @@ summary(misses$age)
 
 ggplot(misses[misses$survived != "None" & !is.na(misses$age),], aes(x = age, fill = survived)) +
   facet_wrap(~pclass) +
-  geom_histogram(binwidth = 5) +
+  stat_count(width = 5) +
   ggtitle("Age for 'Miss.' by Pclass") + 
   xlab("Age") +
   ylab("Total Count")
@@ -296,7 +296,7 @@ length(unique(data.combined$fare))
 
 # Can't make fare a factor, treat as numeric & visualize with histogram
 ggplot(data.combined, aes(x = fare)) +
-  geom_histogram(binwidth = 5) +
+  stat_count(width = 5) +
   ggtitle("Combined Fare Distribution") +
   xlab("Fare") +
   ylab("Total Count") +
@@ -305,7 +305,7 @@ ggplot(data.combined, aes(x = fare)) +
 
 # Let's check to see if fare has predictive power
 ggplot(data.combined[1:891,], aes(x = fare, fill = survived)) +
-  geom_histogram(binwidth = 5) +
+  stat_count(width = 5) +
   facet_wrap(~pclass + title) + 
   ggtitle("Pclass, Title") +
   xlab("fare") +
