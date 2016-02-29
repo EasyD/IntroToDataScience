@@ -9,3 +9,4 @@ This repository contains the code demonstrated in the YouTube tutorial series [I
 - [Introduction to Data Science with R - Data Analysis Part 3](https://www.youtube.com/watch?v=aMV_6LmCs4Q)
 - [Introduction to Data Science with R - Exploratory Modeling 1](https://www.youtube.com/watch?v=UHJH7w9q4Lc)
 - [Introduction to Data Science with R - Cross Validation](https://www.youtube.com/watch?v=84JSk36og34)
+- [Introduction to Data Science with R - Exploratory Modeling 1](https://www.youtube.com/watch?v=2nNjvjeAO4s)
