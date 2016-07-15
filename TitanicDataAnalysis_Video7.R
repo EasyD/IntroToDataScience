@@ -922,6 +922,10 @@ library(Rtsne)
 most.correct <- data.combined[data.combined$new.title != "Mr.",]
 indexes <- which(most.correct$survived != "None")
 
+
+# NOTE - Bug fix for original version. Rtsne needs a seed to ensure consistent
+# output between runs.
+set.seed(984357)
 tsne.1 <- Rtsne(most.correct[, features], check_duplicates = FALSE)
 ggplot(NULL, aes(x = tsne.1$Y[indexes, 1], y = tsne.1$Y[indexes, 2], 
                  color = most.correct$survived[indexes])) +
