@@ -89,9 +89,8 @@ mrses <- data.combined[which(str_detect(data.combined$name, "Mrs.")), ]
 mrses[1:5,]
 
 # Check out males to see if pattern continues
-males <- data.combined[which(train$sex == "male"), ]
+males <- data.combined[which(data.combined$sex == "male"), ]
 males[1:5,]
-
 
 # Expand upon the realtionship between `Survived` and `Pclass` by adding the new `Title` variable to the
 # data set and then explore a potential 3-dimensional relationship.

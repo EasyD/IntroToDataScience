@@ -89,7 +89,7 @@ mrses <- data.combined[which(str_detect(data.combined$name, "Mrs.")), ]
 mrses[1:5,]
 
 # Check out males to see if pattern continues
-males <- data.combined[which(train$sex == "male"), ]
+males <- data.combined[which(data.combined$sex == "male"), ]
 males[1:5,]
 
 
