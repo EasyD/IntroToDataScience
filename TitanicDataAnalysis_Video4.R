@@ -272,7 +272,7 @@ ggplot(data.combined[1:891,], aes(x = ticket.first.char, fill = survived)) +
   ggtitle("Pclass") +
   xlab("ticket.first.char") +
   ylab("Total Count") +
-  ylim(0,150) +
+  ylim(0,300) +
   labs(fill = "Survived")
 
 # Lastly, see if we get a pattern when using combination of pclass & title
