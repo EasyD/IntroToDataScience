@@ -122,7 +122,7 @@ data.combined$title <- as.factor(titles)
 # Since we only have survived lables for the train set, only use the
 # first 891 rows
 ggplot(data.combined[1:891,], aes(x = title, fill = survived)) +
-  stat_count(width = 0.5) +
+  geom_bar() +
   facet_wrap(~pclass) + 
   ggtitle("Pclass") +
   xlab("Title") +
@@ -135,7 +135,7 @@ table(data.combined$sex)
 
 # Visualize the 3-way relationship of sex, pclass, and survival, compare to analysis of title
 ggplot(data.combined[1:891,], aes(x = sex, fill = survived)) +
-  stat_count(width = 0.5) +
+  geom_bar() +
   facet_wrap(~pclass) + 
   ggtitle("Pclass") +
   xlab("Sex") +
@@ -193,7 +193,7 @@ data.combined$sibsp <- as.factor(data.combined$sibsp)
 
 # We believe title is predictive. Visualize survival reates by sibsp, pclass, and title
 ggplot(data.combined[1:891,], aes(x = sibsp, fill = survived)) +
-  stat_count(width = 1) +
+  geom_bar() +
   facet_wrap(~pclass + title) + 
   ggtitle("Pclass, Title") +
   xlab("SibSp") +
@@ -205,7 +205,7 @@ ggplot(data.combined[1:891,], aes(x = sibsp, fill = survived)) +
 # Treat the parch vaiable as a factor and visualize
 data.combined$parch <- as.factor(data.combined$parch)
 ggplot(data.combined[1:891,], aes(x = parch, fill = survived)) +
-  stat_count(width = 1) +
+  geom_bar() +
   facet_wrap(~pclass + title) + 
   ggtitle("Pclass, Title") +
   xlab("ParCh") +
@@ -222,7 +222,7 @@ data.combined$family.size <- as.factor(temp.sibsp + temp.parch + 1)
 
 # Visualize it to see if it is predictive
 ggplot(data.combined[1:891,], aes(x = family.size, fill = survived)) +
-  stat_count(width = 1) +
+  geom_bar() +
   facet_wrap(~pclass + title) + 
   ggtitle("Pclass, Title") +
   xlab("family.size") +

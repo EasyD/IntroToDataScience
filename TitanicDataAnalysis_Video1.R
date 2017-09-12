@@ -132,7 +132,7 @@ data.combined$title <- as.factor(titles)
 # Since we only have survived lables for the train set, only use the
 # first 891 rows
 ggplot(data.combined[1:891,], aes(x = title, fill = survived)) +
-  stat_count(width = 0.5) +
+  geom_bar() +
   facet_wrap(~pclass) + 
   ggtitle("Pclass") +
   xlab("Title") +
